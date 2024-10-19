@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type=text] {
+            width: 60%;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Summarization</h1>
+    <form method="POST">
+        <input type="text" name="text_input" placeholder="Enter your text here..." required><br>
+        <button type="submit" name="train_button" value="Train Model">Train Model</button>
+        <button type="submit" name="predict_button" value="Test Prediction">Test Prediction</button>
+    </form>
+
+    <div class="result">
+        {{ result }}
+    </div>
+</body>
+</html>
